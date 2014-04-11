@@ -1,0 +1,28 @@
+﻿<Window x:Class="SA_Week2.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		Title="Clown" Height="428" Width="778" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+	<Grid>
+		<GroupBox Header="Instellingen" Height="365" HorizontalAlignment="Left" Margin="12,12,0,0" Name="groupBox1" VerticalAlignment="Top" Width="289" Padding="20">
+			<Grid Height="315" Width="242">
+				<CheckBox Content="Linkeroog" Height="16" HorizontalAlignment="Left" Margin="6,6,0,0" Name="linkerOog" VerticalAlignment="Top" Width="225" />
+				<CheckBox Content="Rechteroog" Height="16" HorizontalAlignment="Left" Margin="6,28,0,0" Name="rechterOog" VerticalAlignment="Top" Width="225" />
+				<CheckBox Content="Linker wenkbrauw" Height="16" HorizontalAlignment="Left" Margin="6,50,0,0" Name="linkerWenkbrauw" VerticalAlignment="Top" Width="225" />
+				<CheckBox Content="Rechter wenkbrauw" Height="16" HorizontalAlignment="Left" Margin="6,72,0,0" Name="rechterWenkbrauw" VerticalAlignment="Top" Width="225" />
+				<CheckBox Content="Neus" Height="16" HorizontalAlignment="Left" Margin="6,94,0,0" Name="neus" VerticalAlignment="Top" Width="225" />
+				<CheckBox Content="Mond" Height="16" HorizontalAlignment="Left" Margin="6,116,0,0" Name="mond" VerticalAlignment="Top" Width="225" />
+				<CheckBox Content="Rood om de mond" Height="16" HorizontalAlignment="Left" Margin="6,138,0,0" Name="roodOmDeMond" VerticalAlignment="Top" Width="225" />
+				<CheckBox Content="Blos op de wangen" Height="16" HorizontalAlignment="Left" Margin="6,160,0,0" Name="blosOpDeWangen" VerticalAlignment="Top" Width="225" />
+				<CheckBox Content="Strikje" Height="16" HorizontalAlignment="Left" Margin="6,182,0,0" Name="strikje" VerticalAlignment="Top" Width="225" />
+				<CheckBox Content="Hoedje" Height="16" HorizontalAlignment="Left" Margin="6,204,0,0" Name="hoedje" VerticalAlignment="Top" Width="225" />
+				<CheckBox Content="Haar" Height="16" HorizontalAlignment="Left" Margin="6,226,0,0" Name="haar" VerticalAlignment="Top" Width="225" />
+				<Button Content="Start" Height="31" HorizontalAlignment="Left" Margin="6,259,0,0" Name="startButton" VerticalAlignment="Top" Width="225" Click="startButton_Click" />
+			</Grid>
+		</GroupBox>
+		<GroupBox Header="Clown" Height="365" HorizontalAlignment="Left" Margin="307,12,0,0" Name="groupBox2" VerticalAlignment="Top" Width="437">
+			<Grid>
+				<Canvas Height="330" HorizontalAlignment="Left" Margin="6,6,0,0" Name="canvas" VerticalAlignment="Top" Width="413" />
+			</Grid>
+		</GroupBox>
+	</Grid>
+</Window>
