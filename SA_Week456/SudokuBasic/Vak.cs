@@ -48,6 +48,10 @@ namespace SudokuBasic
 				int isValid;
 
 				Spel.Sudoku.set(X+1, Y+1, value, out canAdapt);
+				
+				if (canAdapt == 0)
+					throw(new Exception("Value cannot be set"));
+
 				Spel.Sudoku.isValid(out isValid);
 
 				if (isValid == 1)
@@ -56,7 +60,7 @@ namespace SudokuBasic
 				}
 				else
 				{
-					Console.WriteLine("Invalid!" + value);
+					Console.WriteLine("Invalid! " + value);
 				}
 	
 				NotifyPropertyChanged("Value");

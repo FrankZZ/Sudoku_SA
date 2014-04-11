@@ -2,12 +2,15 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Sudoku" Height="424" Width="373" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
-    <Grid>
-		<ComboBox ItemsSource="{Binding Positions}" Height="23" HorizontalAlignment="Left" Margin="13,12,0,0" Name="GetalX" VerticalAlignment="Top" Width="72" SelectionChanged="GetalX_SelectionChanged" SelectedIndex="0" />
-		<ComboBox ItemsSource="{Binding Positions}" Height="23" HorizontalAlignment="Left" Margin="105,12,0,0" Name="GetalY" VerticalAlignment="Top" Width="66" SelectedIndex="0" />
-		<ComboBox ItemsSource="{Binding Positions}" Height="23" HorizontalAlignment="Left" Margin="189,12,0,0" Name="getalValue" VerticalAlignment="Top" Width="66" SelectedIndex="0" />
-		<Button Content="OK" Height="23" HorizontalAlignment="Left" Margin="261,12,0,0" Name="OKButton" VerticalAlignment="Top" Width="75" Click="OKButton_Click" />
-		
+	<Grid>
+		<ComboBox ItemsSource="{Binding Positions}" Height="23" HorizontalAlignment="Left" Margin="36,13,0,0" Name="GetalX" VerticalAlignment="Top" Width="34" SelectedIndex="0" />
+		<ComboBox ItemsSource="{Binding Positions}" Height="23" HorizontalAlignment="Left" Margin="96,13,0,0" Name="GetalY" VerticalAlignment="Top" Width="33" SelectedIndex="0" />
+		<ComboBox ItemsSource="{Binding Positions}" Height="23" HorizontalAlignment="Left" Margin="155,13,0,0" Name="getalValue" VerticalAlignment="Top" Width="33" SelectedIndex="0" />
+		<Button Content="Load" Height="23" HorizontalAlignment="Left" Margin="231,13,0,0" Name="LoadButton" VerticalAlignment="Top" Width="33" Click="LoadButton_Click" />
+		<Button Content="Hint" Height="23" HorizontalAlignment="Left" Margin="269,13,0,0" Name="HintButton" VerticalAlignment="Top" Width="33" Click="HintButton_Click" />
+
+		<Button Content="OK" Height="23" HorizontalAlignment="Left" Margin="307,13,0,0" Name="OKButton" VerticalAlignment="Top" Width="33" Click="OKButton_Click" />
+
 		<Grid Name="GameGrid" Margin="12,41,12,12">
 			<Grid.RowDefinitions>
 				<RowDefinition Height="32*" />
@@ -105,8 +108,9 @@
 			<Rectangle Height="102" HorizontalAlignment="Left" Margin="114,91,0,0" Name="rectangle8" Stroke="Black" VerticalAlignment="Top" Width="102" Grid.Row="2" />
 			<Rectangle Height="102" HorizontalAlignment="Left" Margin="222,91,0,0" Name="rectangle9" Stroke="Black" VerticalAlignment="Top" Width="102" Grid.Row="2" />
 		</Grid>
-		<Label Content="x" Height="28" HorizontalAlignment="Left" Margin="-2,10,0,0" Name="label1" VerticalAlignment="Top" />
-		<Label Content="y" Height="28" HorizontalAlignment="Left" Margin="88,9,0,0" Name="label2" VerticalAlignment="Top" />
-		<Label Content="v" Height="28" HorizontalAlignment="Left" Margin="172,9,0,0" Name="label3" VerticalAlignment="Top" />
+		<Label Content="x" Height="28" HorizontalAlignment="Left" Margin="15,11,0,0" Name="label1" VerticalAlignment="Top" />
+		<Label Content="y" Height="28" HorizontalAlignment="Left" Margin="75,11,0,0" Name="label2" VerticalAlignment="Top" />
+		<Label Content="v" Height="28" HorizontalAlignment="Left" Margin="134,11,0,0" Name="label3" VerticalAlignment="Top" />
+		<Button Content="Save" Height="23" HorizontalAlignment="Left" Margin="193,13,0,0" x:Name="SaveButton" VerticalAlignment="Top" Width="33" Click="SaveButton_Click" />
 	</Grid>
 </Window>

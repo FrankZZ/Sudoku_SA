@@ -10,5 +10,12 @@ namespace SudokuBasic
     {
         void Initialize();
         Vak GetVak(int x, int y);
+
+		void Hint();
+		void Load();
+		void Save();
+
+		bool IsFinished();
+
     }
 }

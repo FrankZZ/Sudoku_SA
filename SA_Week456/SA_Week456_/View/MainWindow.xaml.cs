@@ -11,7 +11,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Sudoku;
 using SA_Week456_.ViewModel;
 
 namespace SA_Week456_
@@ -62,12 +61,22 @@ namespace SA_Week456_
 		{
 			if (GetalX.SelectedItem != null && GetalY.SelectedItem != null && getalValue.SelectedItem != null)
 			{
-				MainVM.OKClick
-				(
-					int.Parse(GetalX.SelectedItem.ToString()) - 1, 
-					int.Parse(GetalY.SelectedItem.ToString()) - 1,
-					int.Parse(getalValue.SelectedItem.ToString())
-				);
+				try
+				{
+					MainVM.OKClick
+					(
+						int.Parse(GetalX.SelectedItem.ToString()) - 1, 
+						int.Parse(GetalY.SelectedItem.ToString()) - 1,
+						int.Parse(getalValue.SelectedItem.ToString())
+					);
+
+					if (VM.IsFinished())
+						MessageBox.Show("Sudoku completed!");
+				}
+				catch (Exception ex)
+				{
+					MessageBox.Show(ex.Message);
+				}
 			}
 			else
 			{
@@ -75,9 +84,25 @@ namespace SA_Week456_
 			}
 		}
 
-		private void GetalX_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		private void HintButton_Click(object sender, RoutedEventArgs e)
 		{
+			MainVM.HintClick();
 
+			if (VM.IsFinished())
+				MessageBox.Show("Sudoku completed!");
+		}
+
+		private void LoadButton_Click(object sender, RoutedEventArgs e)
+		{
+			MainVM.LoadClick();
+
+			if (VM.IsFinished())
+				MessageBox.Show("Sudoku completed!");
+		}
+
+		private void SaveButton_Click(object sender, RoutedEventArgs e)
+		{
+			MainVM.SaveClick();
 		}
 	}
 }

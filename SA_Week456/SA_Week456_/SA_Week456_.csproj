@@ -100,18 +100,7 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <COMReference Include="Sudoku">
-      <Guid>{FC98639C-8987-42D6-B20C-8BE179AB7C55}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="C:\Users\Exy\Documents\Git\SudokuBasic\SudokuBasic\SudokuBasic.csproj">
+    <ProjectReference Include="..\SudokuBasic\SudokuBasic.csproj">
       <Project>{b676d730-7434-4e33-9f59-50f9b8ff5b4b}</Project>
       <Name>SudokuBasic</Name>
     </ProjectReference>
