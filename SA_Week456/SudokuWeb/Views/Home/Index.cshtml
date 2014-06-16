@@ -42,6 +42,12 @@
 	<input type="submit" value="Submit">
 </form>
 
+<form id="buttonForm">
+	<input type="submit" value="Hint" name="button" />
+	<input type="submit" value="Load" name="button" />
+	<input type="submit" value="Save" name="button" />
+</form>
+
 <div id="playfield">
 	@for (int outY = 0; outY < 3; outY++) { 
 		for (int outX = 0; outX < 3; outX++) {
@@ -49,7 +55,7 @@
 			<div>
 			@{
 				int x = outX * 3, y = outY * 3;
-					
+				
 				for (int i = 0; i < 9; i++) { 
 					<span>
 						@if (Model.Vakken[x, y].Value != 0) {

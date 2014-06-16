@@ -9,6 +9,7 @@
 #playfield {
     width:460px;
     height:460px;
+	padding-top: 5px;
 }
 
 #playfield div {
