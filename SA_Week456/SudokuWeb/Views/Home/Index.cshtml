@@ -1,0 +1,73 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<form id="valueForm" name="setForm">
+	X
+	<select name="x">
+		<option value="0">1</option>
+		<option value="1">2</option>
+		<option value="2">3</option>
+		<option value="3">4</option>
+		<option value="4">5</option>
+		<option value="5">6</option>
+		<option value="6">7</option>
+		<option value="7">8</option>
+		<option value="8">9</option>
+	</select>
+	Y
+	<select name="y">
+		<option value="0">1</option>
+		<option value="1">2</option>
+		<option value="2">3</option>
+		<option value="3">4</option>
+		<option value="4">5</option>
+		<option value="5">6</option>
+		<option value="6">7</option>
+		<option value="7">8</option>
+		<option value="8">9</option>
+	</select>
+	Value
+	<select name="value">
+		<option value="0">0</option>
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="8">8</option>
+		<option value="9">9</option>
+	</select>
+	<input type="submit" value="Submit">
+</form>
+
+<div id="playfield">
+	@for (int outY = 0; outY < 3; outY++) { 
+		for (int outX = 0; outX < 3; outX++) {
+
+			<div>
+			@{
+				int x = outX * 3, y = outY * 3;
+					
+				for (int i = 0; i < 9; i++) { 
+					<span>
+						@if (Model.Vakken[x, y].Value != 0) {
+							@Model.Vakken[x, y].Value;
+						}
+					</span>
+						
+					x++;
+				
+					if (x % 3 == 0 && i > 0 )
+					{
+						x = outX * 3;
+						y++;
+					}
+				}
+			}
+			</div>
+		}
+
+	}
+</div>

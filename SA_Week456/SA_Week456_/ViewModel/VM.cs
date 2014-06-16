@@ -15,7 +15,7 @@ namespace SA_Week456_.ViewModel
 		{
 			vakVMs = new VakVM[9, 9];
 			Spel = new SudokuBasic.Spel();
-			Spel.Initialize();
+			//Spel.Initialize();
 
 			VM.Refresh();
 		}

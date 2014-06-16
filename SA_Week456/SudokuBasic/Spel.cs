@@ -9,13 +9,17 @@ namespace SudokuBasic
 	public class Spel : ISpel
 	{
 		public static IGame Sudoku = new Sudoku.Game();
-		public Vak[,] vakken;
+		public Vak[,] Vakken;
 
+		public Spel()
+		{
+			Initialize();
+		}
 
 		public void Initialize()
 		{
 
-			vakken = new Vak[9, 9];
+			Vakken = new Vak[9, 9];
 
 			Spel.Sudoku.create();
 
@@ -23,7 +27,7 @@ namespace SudokuBasic
 			{
 				for (int y = 0; y < 9; y++)
 				{
-					vakken[x, y] = new Vak(x, y);
+					Vakken[x, y] = new Vak(x, y);
 				}
 			}
 
@@ -52,7 +56,7 @@ namespace SudokuBasic
 
 			if (hintPossible == 1)
 			{
-				vakken[xx - 1, yy - 1].Value = hintValue;
+				Vakken[xx - 1, yy - 1].Value = hintValue;
 			}
 			else
 				throw (new Exception("No hints possible"));
@@ -70,8 +74,8 @@ namespace SudokuBasic
 			{
 				for (int y = 0; y < 9; y++)
 				{
-					if (vakken[x, y] != null)
-						vakken[x, y].NotifyPropertyChanged("Value");
+					if (Vakken[x, y] != null)
+						Vakken[x, y].NotifyPropertyChanged("Value");
 
 				}
 			}
@@ -97,7 +101,7 @@ namespace SudokuBasic
 		public Vak GetVak(int x, int y)
 		{
 			Vak vak;
-			vak = vakken[x, y];
+			vak = Vakken[x, y];
 
 			return vak;
 		}
